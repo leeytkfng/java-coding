@@ -1,21 +1,30 @@
 package greedy;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class changeCount {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        System.out.println("돈을 입력:");
-        int n = sc.nextInt();
-        int count = 0;
-        int[] coin_type = {500,100,50,10};
-        for(int i = 0; i< coin_type.length; i++){
-            int coin = coin_type[i];
-            count += n / coin; //1.500 2. 100 3.50 .4.10
-            n %= coin; //나머지로 남은값 반환
+        System.out.println("돈을 입력 (1 ~ 999원 사이의 값을 입력하세요):");
+        int n = 1000 - Integer.parseInt(br.readLine());
+
+        if (n < 0 || n > 999) {
+            System.out.println("유효하지 않은 입력입니다. 1 ~ 999원 사이의 값을 입력하세요.");
+            return;
         }
-        System.out.println(count);
+
+        int count = 0;
+        int[] coinType = {500, 100, 50, 10, 5, 1};
+
+        for (int coin : coinType) {
+            count += n / coin;  // 해당 동전으로 거슬러 줄 수 있는 개수
+            n %= coin;          // 남은 금액 계산
+        }
+
+        System.out.println("필요한 동전 개수: " + count);
     }
 }
 

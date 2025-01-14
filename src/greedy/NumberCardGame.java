@@ -15,9 +15,9 @@ public class NumberCardGame {
             int min_value = 1001;  //갱신 벨류를 넣기
             for(int j = 0; j< m; j++){
                 int x = sc.nextInt();
-                min_value = Math.min(min_value,x);
+                min_value = Math.min(min_value,x); //작은 수 돌려서 찾기 Math 메서드
             }
-            answer = Math.max(min_value,answer);
+            answer = Math.max(min_value,answer); // 작은수 중에서 큰수 갱식.
         }
         System.out.println(answer);
     }
