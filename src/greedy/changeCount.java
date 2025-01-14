@@ -1,3 +1,5 @@
+package greedy;
+
 import java.util.Scanner;
 
 public class changeCount {
@@ -16,3 +18,7 @@ public class changeCount {
         System.out.println(count);
     }
 }
+
+// 알고리즘 구현 과정에서 생각할수있는것
+/* 시간 복잡도를 최소화 하기 */
+/* 공간 복잡도를 최소화 하기 */
