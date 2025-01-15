@@ -77,6 +77,21 @@ public class Main {
             }
 
         }
+        int [][] arr = new int[2][3];
+        int data = 1;
+        for (int h = 0; h<arr.length;h++){
+
+            for(int k =0 ; k < arr[h].length ; k++){
+                arr[h][k] = data;
+                data *= 10;
+            }
+        }
+        for (int[] ints : arr) {
+            for (int anInt : ints) {
+                System.out.print(anInt + "\t");
+            }
+            System.out.println();
+        }
 
 
         br.close();
