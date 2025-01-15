@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args)throws IOException {
+        Scanner sc = new Scanner(System.in);
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
@@ -42,16 +43,41 @@ public class Main {
         for (int i = 0 ; i <3 ;i++){
              System.out.print("JAVA"+(i+1)+"\t");
         }
+        System.out.println();
+        int j = 0;
         while (true) {
-
-            int j = 0;
-            if(j > 4) {
+            if(j>2) {
                 break;
             }
-            System.out.println("JAVA"+(j+1)+"\t");
+            System.out.print("JAVA"+(j+1)+"\t");
             j++;
+        }
+        System.out.println();
+        int l = 0;
+        do {
+            System.out.print("JAVA"+(l+1)+"\t");
+            l++;
+        }while (l<3);
+        System.out.println();
+
+        while (true){
+            for (int k = 0; k<4; k++){
+                for (int t =0; t<4; t++){
+                    System.out.print((t+1)+"\t");
+                }
+                System.out.println();
+            }
+
+            System.out.println("입력숫자:");
+            int in = sc.nextInt();
+
+            if(in ==0){
+                System.out.println("끝");
+                break;
+            }
 
         }
+
 
         br.close();
         bw.close();
