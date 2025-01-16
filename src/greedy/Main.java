@@ -3,98 +3,57 @@ package greedy;
 import java.io.*;
 import java.util.Scanner;
 
+class Mehotd{
+    public void hi(){
+        System.out.println("hi");
+    }
+}
+
 public class Main {
     public static void main(String[] args)throws IOException {
         Scanner sc = new Scanner(System.in);
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        System.out.println("10,20,30중에 입력하세요");
+        int n = sc.nextInt();
+        Mehotd mehotd = new Mehotd();
 
-
-
-        System.out.println("값을 입력하시오:");
-        String ch = br.readLine();
-
-        if(ch.equals("a")){
-            bw.write("apple");
-        } else if (ch.equals("b")){
-            bw.write("banana");
-        } else {
-            bw.write("coconut");
-        }
-        bw.flush();
-
-
-        char ch1 = ch.charAt(0);
-
-        switch(ch1 -96) {
-            case 1:
-                System.out.println("apple");
-                break;
-            case 2:
-                System.out.println("banana");
-                break;
-            case 3:
-                System.out.println("coconut");
-                break;
-            default:
-                System.out.println("null");
+        if (n == 10) {
+            System.out.println(n*10);
+        } else if (n == 20) {
+            System.out.println(n*20);
+        } else if (n == 30){
+            System.out.println(n*30);
         }
 
-        for (int i = 0 ; i <3 ;i++){
-             System.out.print("JAVA"+(i+1)+"\t");
+        switch (n) {
+            case 10: System.out.println(n*10); break;
+            case 20:System.out.println(n*20); break;
+            case 30: System.out.println(n*30);break;
+            default:System.out.println("다시입력해라");
         }
-        System.out.println();
-        int j = 0;
-        while (true) {
-            if(j>2) {
-                break;
-            }
-            System.out.print("JAVA"+(j+1)+"\t");
+        for(int i =0; i <2 ;i++){
+            System.out.println(i);
+        }
+        int j =0;
+        while (j<3){
             j++;
+            System.out.println(j);
         }
-        System.out.println();
-        int l = 0;
+        int t = 0;
         do {
-            System.out.print("JAVA"+(l+1)+"\t");
-            l++;
-        }while (l<3);
-        System.out.println();
+            t++;
+            System.out.println(t);
 
-        while (true){
-            for (int k = 0; k<4; k++){
-                for (int t =0; t<4; t++){
-                    System.out.print((t+1)+"\t");
-                }
-                System.out.println();
-            }
+        } while (t<3);
 
-            System.out.println("입력숫자:");
-            int in = sc.nextInt();
-
-            if(in ==0){
-                System.out.println("끝");
-                break;
-            }
-
-        }
-        int [][] arr = new int[2][3];
-        int data = 1;
-        for (int h = 0; h<arr.length;h++){
-
-            for(int k =0 ; k < arr[h].length ; k++){
-                arr[h][k] = data;
-                data *= 10;
-            }
-        }
-        for (int[] ints : arr) {
-            for (int anInt : ints) {
-                System.out.print(anInt + "\t");
-            }
-            System.out.println();
-        }
-
-
-        br.close();
-        bw.close();
+        int[][] arr = new int[2][3];
+        int data =1;
+          for(int i =0; i<arr[i].length;i++){
+              for (int k= 0; k<3; k++){
+                  arr[i][k] = data++;
+                  System.out.print(arr[i][k]+"\t");
+              }
+              System.out.println();
+          }
+         mehotd.hi();
     }
 }

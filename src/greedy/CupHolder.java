@@ -21,6 +21,7 @@ public class CupHolder {
                 i++; // 다음번호가 L일거기 떄문에 건너뜀
             }
         }
+        if(result >n) result =n;
         System.out.println(result);
     }
 
