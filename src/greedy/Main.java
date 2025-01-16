@@ -3,6 +3,20 @@ package greedy;
 import java.io.*;
 import java.util.Scanner;
 
+
+class vehicle {
+    String name = "lew";  //명시적 초기화
+    int count;  // 0
+    {name = "kim" ;count =4;} // 초기화 블럭
+
+    public vehicle() {name ="phark";}
+    public vehicle(String name , int count){
+        super(); //phark
+        this.name =name;
+        this.count = count; //생성자
+    }
+    //순사 기본값 -> 명시적 초괴화 -> 초기화 블럭 -> 생성사 순으로 변수 값이 이어감
+}
 class Method{
 
     public void hi1(){
@@ -91,5 +105,6 @@ public class Main {
          System.out.println(outPut1);
          OutPut outPut2 = new OutPut();
          System.out.println(outPut2.out);
+
     }
 }
