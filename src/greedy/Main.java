@@ -3,6 +3,24 @@ package greedy;
 import java.io.*;
 import java.util.Scanner;
 
+class Goods {
+    private final String tag;
+    private Long price ;
+
+    public Goods (String tag, Long price){
+        this.tag=tag;
+        this.price =price;
+    }
+
+}
+
+class foods extends Goods {
+
+    public foods(String tag, Long price) {
+        super(tag, price); //super 의 태크 프리아스를 가져옴
+    }
+}
+
 
 class vehicle {
     String name = "lew";  //명시적 초기화
