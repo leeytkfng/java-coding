@@ -7,7 +7,7 @@ import java.util.Scanner;
 class vehicle {
     String name = "lew";  //명시적 초기화
     int count;  // 0
-    {name = "kim" ;count =4;} // 초기화 블럭
+    {name = "kim" ;count =4;} // 초기화 블럭 , 값을 덮어씀
 
     public vehicle() {name ="phark";}
     public vehicle(String name , int count){
