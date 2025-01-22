@@ -16,14 +16,14 @@ public class UpDownLeftRight {
 
         for (int i = 0; i <arr.length;i++) {
             char arr1 = arr[i].charAt(0); //arr 배열에서 원소 가지고오기
-            int nx = -1 , ny = -1;
+            int nx = 0 , ny = 0;
             for(int j =0; j<4; j++){
                 if(arr1 == location[j]){
                     nx = x + dx[j];
                     ny = y + dy[j];
                 }
             }
-            if(nx < 1 || ny < 1 ||nx > n || ny > n) continue;
+            if(nx < 1 || ny < 1 ||nx > n || ny > n) continue; //칸 넘어가기 방지 nxn
 
             x = nx;
             y = ny;
