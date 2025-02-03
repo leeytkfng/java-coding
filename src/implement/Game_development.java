@@ -1,7 +1,8 @@
-import java.util.*;
+package implement;
 
-public class Main {
+import java.util.Scanner;
 
+public class Game_development {
     public static int n, m, x, y, direction;
     // 방문한 위치를 저장하기 위한 맵을 생성하여 0으로 초기화
     public static int[][] d = new int[50][50];
@@ -74,5 +75,4 @@ public class Main {
 
         System.out.println(cnt);
     }
-
 }
