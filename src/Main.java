@@ -8,7 +8,7 @@ public class Main {
            n[i] = sc.nextInt();
         }
 
-        System.out.println(Arrays.toString(n)); ///git
+        System.out.println(Arrays.toString(n)); ///git 123
 
 
 //        int[] arr = {0,1,2,3,4,5,6,7,8,9};
