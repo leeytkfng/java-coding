@@ -1,6 +1,8 @@
+package implement;
+
 import java.util.Scanner;
 
-public class Main {
+public class GroupWordChecker {
 
     static Scanner in = new Scanner(System.in);
     public static void main(String[] args) {
