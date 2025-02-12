@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class GroupWordChecker {
 
-    static Scanner in = new Scanner(System.in);
+    static Scanner in = new Scanner(System.in); //GroupWordChecker에 종속되는 static 인스턴스 Scanner
     public static void main(String[] args) {
 
         int count = 0;

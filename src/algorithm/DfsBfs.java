@@ -1,10 +1,12 @@
+package algorithm;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Scanner;
 import java.util.*;
 
-public class Main {
+public class DfsBfs {
 
     static List<List<Integer>> graph = new ArrayList<>();
     static boolean[] visited;
