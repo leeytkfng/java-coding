@@ -60,7 +60,7 @@ public class DfsBfs {
         } //간선연결
 
         for(int i =1; i<=n; i++){
-            Collections.sort(graph.get(i));
+            Collections.sort(graph.get(i)); //어레이리스트에 무작위로 저장된 간선과 노드들의 관께를 오름차순으로 정렬
         }
 
 
@@ -68,6 +68,5 @@ public class DfsBfs {
         dfs(v); //v번쨰에서 시작하기
         System.out.println();
         bfs(v);
-
     }
 }
