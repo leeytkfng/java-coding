@@ -13,30 +13,30 @@ public class DfsBfs {
     static Scanner sc = new Scanner(System.in);
 
     public static void dfs(int node) {
-        visited[node] = true;
-        System.out.print(node + " ");
+        visited[node] = true;  //현재 방문한 노드 = ture , 방문 처리
+        System.out.print(node + " "); //현재 노드 출력
 
-        for(int neighbor : graph.get(node)){
-            if(!visited[neighbor]){
-                dfs(neighbor);
+        for(int neighbor : graph.get(node)){ //현재 노드와 연결된 노드들을 하나씩 확인
+            if(!visited[neighbor]){ // 방문하지 않은 노드라면 재귀 호출
+                dfs(neighbor); // 다시한번 탐색
             }
         }
     }
     public static void bfs(int start) {
         Queue<Integer> queue = new LinkedList<>();
-        boolean[] visitedBFS = new boolean[graph.size()];
+        boolean[] visitedBFS = new boolean[graph.size()]; // BFS 전용 방문 체크 배열
 
-        queue.add(start);
-        visitedBFS[start] = true; //start 지점부터 시작
+        queue.add(start); // 시작노드를 큐에 삽입
+        visitedBFS[start] = true; //start 지점부터 시작 , 시작 노드 방문 처리
 
-        while (!queue.isEmpty()) {
-            int node = queue.poll();
-            System.out.print(node + " ");
+        while (!queue.isEmpty()) { // 큐가 빌때까지 반복
+            int node = queue.poll(); // 큐에서 쌓인 노드들 중에서 하나 꺼내기
+            System.out.print(node + " "); // 현재 노드 출력
 
             for(int neighbor : graph.get(node)){
                 if(!visitedBFS[neighbor]){ //bfs 탐색으로 방문한적 없는 노드
-                    queue.add(neighbor);
-                    visitedBFS[neighbor] = true;
+                    queue.add(neighbor); // 큐에 추가
+                    visitedBFS[neighbor] = true; //방문처리
                 }
             }
         }
